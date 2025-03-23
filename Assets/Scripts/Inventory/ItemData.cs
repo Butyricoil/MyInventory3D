@@ -1,9 +1,10 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "ItemData", menuName = "Inventory/item")]
-public class Item : ScriptableObject
+public class ItemData : ScriptableObject
 {
     public string itemName;
+    public Sprite itemSprite;
     public int itemID;
     public float weight;
     public ItemType itemType;

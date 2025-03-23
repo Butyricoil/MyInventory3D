@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2fe27a1ce460f0458f3af25e0f051df, type: 3}
   m_Name: Cylinder
   m_EditorClassIdentifier: 
-  itemName: Cube
-  itemID: 1
+  itemName: Cylinder
+  itemSprite: {fileID: 21300000, guid: ace972e14f38f8f418388a51fe454fe4, type: 3}
+  itemID: 3
   weight: 1
-  itemType: 0
+  itemType: 2
