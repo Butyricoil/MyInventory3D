@@ -216,8 +216,8 @@ RectTransform:
   - {fileID: 1763368044}
   - {fileID: 1198175249}
   - {fileID: 85806224}
-  - {fileID: 563192912}
   - {fileID: 1415815458}
+  - {fileID: 563192912}
   m_Father: {fileID: 1387247273}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 85806227}
   - component: {fileID: 85806226}
   - component: {fileID: 85806225}
+  - component: {fileID: 85806228}
   m_Layer: 5
   m_Name: Inventory Buttom
   m_TagString: Untagged
@@ -307,19 +308,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 85806226}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: ToggleMenu
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &85806226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,6 +347,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85806223}
   m_CullTransparentMesh: 1
+--- !u!114 &85806228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85806223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2036f8fe34a659d40918b767c9542b0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryManager: {fileID: 1763368045}
+  _miniMenuManager: {fileID: 1198175250}
 --- !u!1 &161125990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,7 +1258,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.047180176, y: 0.12487793}
+  m_AnchoredPosition: {x: 0.04711914, y: 0.12487793}
   m_SizeDelta: {x: -30.3384, y: -24.9536}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &625559012
@@ -1894,8 +1897,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ButonManager, Assembly-CSharp
+      - m_Target: {fileID: 1763368045}
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ToggleMenu
         m_Mode: 1
         m_Arguments:
@@ -2063,10 +2066,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f158a81925140d38607cb75138f7ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _StartItems:
-  - {fileID: 11400000, guid: a07f3ce376657f141940d8aa878a48d2, type: 2}
-  - {fileID: 11400000, guid: df01bb772c4146f408f4f67f1adf9124, type: 2}
-  - {fileID: 11400000, guid: a75b1d9943c3e4b44805500a469d4b19, type: 2}
 --- !u!1 &1111220464
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,6 +2184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1198175249}
+  - component: {fileID: 1198175250}
   m_Layer: 0
   m_Name: MiniInventoryManager
   m_TagString: Untagged
@@ -2207,6 +2207,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 13944686}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1198175250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198175248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca8af10ae31430bb482cf1bfade9788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _miniInventoryMenu: {fileID: 563192911}
+  _delay: 1
 --- !u!1 &1292014000
 GameObject:
   m_ObjectHideFlags: 0
@@ -2411,7 +2425,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000061035156}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -453.9342, y: -224.4664}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1415815459
@@ -2650,7 +2664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 345a486caad144998ece4233dc538eab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _InventoryPanel: {fileID: 1415815457}
+  _InventoryMenu: {fileID: 1415815457}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -48,7 +48,7 @@ public class ButtonInputHandler : MonoBehaviour, IPointerDownHandler, IPointerUp
         // Если курсор внутри кнопки
         if (_isPointerInside)
         {
-            if (holdDuration > _miniMenuManager.Delay)
+            if (holdDuration < _miniMenuManager.Delay)
             {
                 // Если время удержания меньше задержки, это клик — открываем обычное меню
                 inventoryManager.ToggleMenu();
