@@ -4,18 +4,18 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "InventoryData", menuName = "Inventory/InventoryData")]
 public class InventoryData : ScriptableObject
 {
-    public List<ItemData> items = new List<ItemData>();
+    [SerializeField] private List<ItemData> items = new List<ItemData>();
 
     public void AddItem(ItemData item)
     {
         if (!items.Contains(item))
         {
             items.Add(item);
-            Debug.Log("Item added: " + item.itemName);
+            Debug.Log("Item added: " + item.ItemName);
         }
         else
         {
-            Debug.Log("Item already in inventory: " + item.itemName);
+            Debug.Log("Item already in inventory: " + item.ItemName);
         }
     }
 
@@ -24,11 +24,11 @@ public class InventoryData : ScriptableObject
         if (items.Contains(item))
         {
             items.Remove(item);
-            Debug.Log("Item removed: " + item.itemName);
+            Debug.Log("Item removed: " + item.ItemName);
         }
         else
         {
-            Debug.Log("Item not found in inventory: " + item.itemName);
+            Debug.Log("Item not found in inventory: " + item.ItemName);
         }
     }
 }

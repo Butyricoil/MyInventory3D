@@ -552,6 +552,7 @@ GameObject:
   - component: {fileID: 277237329}
   - component: {fileID: 277237328}
   - component: {fileID: 277237327}
+  - component: {fileID: 277237331}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -675,6 +676,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 277237325}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &277237331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277237325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec65f78c23854e2b8568f7e44268274a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemData: {fileID: 11400000, guid: df01bb772c4146f408f4f67f1adf9124, type: 2}
+  _onPickUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1429,6 +1446,7 @@ GameObject:
   - component: {fileID: 671739588}
   - component: {fileID: 671739587}
   - component: {fileID: 671739586}
+  - component: {fileID: 671739590}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -1554,6 +1572,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671739584}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &671739590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671739584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec65f78c23854e2b8568f7e44268274a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemData: {fileID: 11400000, guid: df01bb772c4146f408f4f67f1adf9124, type: 2}
+  _onPickUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &781514834
 GameObject:
   m_ObjectHideFlags: 0
@@ -1567,6 +1601,7 @@ GameObject:
   - component: {fileID: 781514838}
   - component: {fileID: 781514837}
   - component: {fileID: 781514836}
+  - component: {fileID: 781514840}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1690,6 +1725,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781514834}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &781514840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781514834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec65f78c23854e2b8568f7e44268274a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemData: {fileID: 11400000, guid: a07f3ce376657f141940d8aa878a48d2, type: 2}
+  _onPickUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &785727789
 GameObject:
   m_ObjectHideFlags: 0
@@ -2664,7 +2715,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 345a486caad144998ece4233dc538eab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _InventoryMenu: {fileID: 1415815457}
+  _inventoryMenu: {fileID: 0}
+  _onItemAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  _onInventoryToggle:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
