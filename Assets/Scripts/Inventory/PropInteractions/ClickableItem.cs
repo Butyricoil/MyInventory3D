@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 public class ClickableItem : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private ItemData _itemData;
+    [SerializeField] private InventoryData _inventoryData; // Ссылка на InventoryData
     [SerializeField] private UnityEvent _onPickUp;
 
     public ItemData GetItemData() => _itemData;
@@ -25,14 +26,21 @@ public class ClickableItem : MonoBehaviour, IPointerClickHandler
 
     private void TryPickUpItem()
     {
-        var inventory = FindObjectOfType<InventoryManager>();
-        if (inventory != null && _itemData != null)
+        if (_inventoryData == null)
         {
-            if (inventory.AddItem(_itemData))
-            {
-                _onPickUp.Invoke();
-                Destroy(gameObject);
-            }
+            Debug.LogError("InventoryData not assigned!");
+            return;
         }
+
+        if (_itemData == null)
+        {
+            Debug.LogError("ItemData not assigned!");
+            return;
+        }
+
+        // Пытаемся добавить предмет в инвентарь
+        _inventoryData.AddItem(_itemData);
+        _onPickUp.Invoke(); // Вызываем событие (например, звук, эффект)
+        Destroy(gameObject); // Уничтожаем предмет на сцене
     }
 }

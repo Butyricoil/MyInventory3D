@@ -689,6 +689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemData: {fileID: 11400000, guid: df01bb772c4146f408f4f67f1adf9124, type: 2}
+  _inventoryData: {fileID: 11400000, guid: 03d465acc48123b40b272c2e7b686bfe, type: 2}
   _onPickUp:
     m_PersistentCalls:
       m_Calls: []
@@ -1585,6 +1586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemData: {fileID: 11400000, guid: df01bb772c4146f408f4f67f1adf9124, type: 2}
+  _inventoryData: {fileID: 11400000, guid: 03d465acc48123b40b272c2e7b686bfe, type: 2}
   _onPickUp:
     m_PersistentCalls:
       m_Calls: []
@@ -1738,6 +1740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemData: {fileID: 11400000, guid: a07f3ce376657f141940d8aa878a48d2, type: 2}
+  _inventoryData: {fileID: 11400000, guid: 03d465acc48123b40b272c2e7b686bfe, type: 2}
   _onPickUp:
     m_PersistentCalls:
       m_Calls: []
@@ -2715,7 +2718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 345a486caad144998ece4233dc538eab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inventoryMenu: {fileID: 0}
+  _inventoryMenu: {fileID: 1415815457}
   _onItemAdded:
     m_PersistentCalls:
       m_Calls: []
