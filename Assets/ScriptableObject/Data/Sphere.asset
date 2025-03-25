@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9febfa2d52a30774b9e7811f042ee86b, type: 3}
   m_Name: Sphere
   m_EditorClassIdentifier: 
-  _itemName: Sphere
-  _itemSprite: {fileID: 21300000, guid: f5286051a9b6fae45b417094a92ebf08, type: 3}
-  _itemID: 3
-  _weight: 1
-  _itemType: 2
+  itemName: Sphere
+  itemID: 2
+  weight: 1
+  itemType: 1
+  stackble: 0
+  itemSprite: {fileID: 21300000, guid: f5286051a9b6fae45b417094a92ebf08, type: 3}

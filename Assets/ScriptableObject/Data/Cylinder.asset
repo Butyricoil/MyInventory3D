@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9febfa2d52a30774b9e7811f042ee86b, type: 3}
   m_Name: Cylinder
   m_EditorClassIdentifier: 
-  _itemName: Cylinder
-  _itemSprite: {fileID: 21300000, guid: ace972e14f38f8f418388a51fe454fe4, type: 3}
-  _itemID: 2
-  _weight: 1
-  _itemType: 1
+  itemName: Cylinder
+  itemID: 1
+  weight: 1
+  itemType: 2
+  stackble: 0
+  itemSprite: {fileID: 21300000, guid: ace972e14f38f8f418388a51fe454fe4, type: 3}

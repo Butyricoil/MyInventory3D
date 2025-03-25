@@ -1,14 +1,21 @@
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "ItemData", menuName = "Inventory/item")]
 public class ItemData : ScriptableObject
 {
-    [SerializeField] private string _itemName;
-    [SerializeField] private Sprite _itemSprite;
-    [SerializeField] private int _itemID;
-    [SerializeField] private float _weight;
-    [SerializeField] private ItemType _itemType;
+    [Header("Only Gameplay")]
+    [SerializeField] private string itemName;
+    [SerializeField] private int itemID;
+    [SerializeField] private float weight;
+    [SerializeField] private ItemType itemType;
+
+    [Header("Only UI")]
+    [SerializeField] private bool stackble;
+
+    [Header("Both")]
+    [SerializeField] private Sprite itemSprite;
 
     public enum ItemType
     {
@@ -18,18 +25,20 @@ public class ItemData : ScriptableObject
     }
 
     // Публичные свойства для доступа
-    public string ItemName => _itemName;
-    public Sprite ItemSprite => _itemSprite;
-    public int ItemID => _itemID;
-    public float Weight => _weight;
-    public ItemType Type => _itemType;
+    public string ItemName => itemName;
+    public Sprite ItemSprite => itemSprite;
+    public int ItemID => itemID;
+    public float Weight => weight;
+    public ItemType Type => itemType;
+    public bool Stackable => stackble;
+
 
     // Метод для редактора (опционально)
     public void SetID(int newId)
     {
-#if UNITY_EDITOR
-        _itemID = newId;
+        #if UNITY_EDITOR
+        itemID = newId;
         EditorUtility.SetDirty(this);
-#endif
+        #endif
     }
 }
