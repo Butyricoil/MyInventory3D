@@ -233,6 +233,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 161125991}
     m_Modifications:
+    - target: {fileID: 4597760345450193743, guid: 2f0ff882033d4344593f10eb7a066f6f, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597760345450193743, guid: 2f0ff882033d4344593f10eb7a066f6f, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597760345450193743, guid: 2f0ff882033d4344593f10eb7a066f6f, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597760345450193743, guid: 2f0ff882033d4344593f10eb7a066f6f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7194181536955891442, guid: 2f0ff882033d4344593f10eb7a066f6f, type: 3}
       propertyPath: m_Name
       value: ItemSlot (3)
@@ -542,7 +558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 5ddbac41e46f1be4bb5e2b521547b907, type: 2}
-  m_Color: {r: 0.589, g: 0.589, b: 0.589, a: 1}
+  m_Color: {r: 0.46226418, g: 0.30724487, b: 0.26383945, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -729,6 +745,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 161125991}
     m_Modifications:
+    - target: {fileID: 4597760345450193743, guid: 2f0ff882033d4344593f10eb7a066f6f, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597760345450193743, guid: 2f0ff882033d4344593f10eb7a066f6f, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597760345450193743, guid: 2f0ff882033d4344593f10eb7a066f6f, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597760345450193743, guid: 2f0ff882033d4344593f10eb7a066f6f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7194181536955891442, guid: 2f0ff882033d4344593f10eb7a066f6f, type: 3}
       propertyPath: m_Name
       value: ItemSlot (2)
@@ -2343,6 +2375,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 161125991}
     m_Modifications:
+    - target: {fileID: 4597760345450193743, guid: 2f0ff882033d4344593f10eb7a066f6f, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597760345450193743, guid: 2f0ff882033d4344593f10eb7a066f6f, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597760345450193743, guid: 2f0ff882033d4344593f10eb7a066f6f, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597760345450193743, guid: 2f0ff882033d4344593f10eb7a066f6f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7194181536955891442, guid: 2f0ff882033d4344593f10eb7a066f6f, type: 3}
       propertyPath: m_Name
       value: ItemSlot (1)
@@ -2657,7 +2705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.9490196}
+  m_Color: {r: 0.3018868, g: 0.19715786, b: 0.05268779, a: 0.85882354}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2910,6 +2958,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 161125991}
     m_Modifications:
+    - target: {fileID: 4597760345450193743, guid: 2f0ff882033d4344593f10eb7a066f6f, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597760345450193743, guid: 2f0ff882033d4344593f10eb7a066f6f, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597760345450193743, guid: 2f0ff882033d4344593f10eb7a066f6f, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597760345450193743, guid: 2f0ff882033d4344593f10eb7a066f6f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7194181536955891442, guid: 2f0ff882033d4344593f10eb7a066f6f, type: 3}
       propertyPath: m_Name
       value: ItemSlot
