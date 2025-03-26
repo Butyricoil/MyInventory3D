@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -7,6 +8,8 @@ public class InventoryManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GameObject inventoryMenu;
+    [SerializeField] private InventorySlot[] inventorySlot;
+    [SerializeField] private GameObject InventoryItemPrefab;
 
     [Header("Events")]
     [SerializeField] private UnityEvent<Item> onItemAdded;
@@ -33,15 +36,35 @@ public class InventoryManager : MonoBehaviour
         onInventoryToggle.Invoke(newState);
     }
 
-    public bool AddItem(Item item)
+    public void AddItem(Item item)
     {
-        if (item == null) return false;
+        // найти пустой слот
+        for (int i = 0; i < inventorySlot.Length; i++)
+        {
+            InventorySlot slot = inventorySlot[i];
+            InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+            if (itemInSlot == null)
+            {
+                SpawnNewItem(item, slot);
+                return;
+            }
+        }
+
+        if (item == null) return;
 
         _items.Add(item);
         onItemAdded.Invoke(item);
 
         Debug.Log($"Added {item.ItemName} (ID: {item.ItemID}) to inventory");
-        return true;
+    }
+
+
+
+    private void SpawnNewItem(Item item, InventorySlot slot)
+    {
+        GameObject newItemGo = Instantiate(InventoryItemPrefab, slot.transform);
+        InventoryItem inventoryItem = newItemGo.GetComponent<InventoryItem>();
+        inventoryItem.InitialliseItem(item);
     }
 
     public bool HasItem(int itemId)

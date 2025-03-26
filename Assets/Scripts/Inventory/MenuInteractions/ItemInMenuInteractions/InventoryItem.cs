@@ -13,13 +13,9 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     [HideInInspector] public Transform parentAfterDrag;
 
-    public void Start()
+    public void InitialliseItem(Item item)
     {
-        InitializeItem(item);
-    }
-
-    private void InitializeItem(Item item)
-    {
+        InitialliseItem(item);
         image.sprite = item.ItemSprite;
     }
 
