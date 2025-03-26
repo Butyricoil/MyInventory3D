@@ -1,16 +1,27 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.PlayerLoop;
 
-public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
-    [SerializeField] private Image image;
+public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
+
     [SerializeField] private ItemData item;
 
+    [Header("Ui")]
+    [SerializeField] private Image image;
 
     [HideInInspector] public Transform parentAfterDrag;
+
+    public void Start()
+    {
+        InitializeItem(item);
+    }
+
+    private void InitializeItem(ItemData itemData)
+    {
+        image.sprite = itemData.ItemSprite;
+    }
 
     public void OnBeginDrag(PointerEventData eventData) {
         Debug.Log("Begin drag");
