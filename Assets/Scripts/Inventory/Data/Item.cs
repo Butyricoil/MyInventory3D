@@ -2,8 +2,8 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-[CreateAssetMenu(fileName = "ItemData", menuName = "Inventory/item")]
-public class ItemData : ScriptableObject
+[CreateAssetMenu(fileName = "Item", menuName = "Inventory/item")]
+public class Item : ScriptableObject
 {
     [Header("Only Gameplay")]
     [SerializeField] private string itemName;

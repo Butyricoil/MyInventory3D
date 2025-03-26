@@ -12,7 +12,7 @@ public class ItemLogger : MonoBehaviour
         }
     }
 
-    private void LogItemAdded(ItemData item)
+    private void LogItemAdded(Item item)
     {
         Debug.Log($"Item added to inventory: {item.ItemName} (ID: {item.ItemID})");
     }

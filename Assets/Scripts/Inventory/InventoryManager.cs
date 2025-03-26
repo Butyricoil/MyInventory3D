@@ -1,43 +1,44 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class InventoryManager : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private GameObject _inventoryMenu;
+    [SerializeField] private GameObject inventoryMenu;
 
     [Header("Events")]
-    [SerializeField] private UnityEvent<ItemData> _onItemAdded;
-    [SerializeField] private UnityEvent<bool> _onInventoryToggle;
+    [SerializeField] private UnityEvent<Item> onItemAdded;
+    [SerializeField] private UnityEvent<bool> onInventoryToggle;
 
-    private List<ItemData> _items = new List<ItemData>();
+    private List<Item> _items = new List<Item>();
 
-    public IReadOnlyList<ItemData> Items => _items.AsReadOnly();
-    public UnityEvent<ItemData> OnItemAdded => _onItemAdded;
-    public UnityEvent<bool> OnInventoryToggle => _onInventoryToggle;
+    public IReadOnlyList<Item> Items => _items.AsReadOnly();
+    public UnityEvent<Item> OnItemAdded => onItemAdded;
+    public UnityEvent<bool> OnInventoryToggle => onInventoryToggle;
 
     private void Awake()
     {
-        if (_inventoryMenu != null)
+        if (inventoryMenu != null)
         {
-            _inventoryMenu.SetActive(false);
+            inventoryMenu.SetActive(false);
         }
     }
 
     public void ToggleMenu()
     {
-        bool newState = !_inventoryMenu.activeSelf;
-        _inventoryMenu.SetActive(newState);
-        _onInventoryToggle.Invoke(newState);
+        bool newState = !inventoryMenu.activeSelf;
+        inventoryMenu.SetActive(newState);
+        onInventoryToggle.Invoke(newState);
     }
 
-    public bool AddItem(ItemData item)
+    public bool AddItem(Item item)
     {
         if (item == null) return false;
 
         _items.Add(item);
-        _onItemAdded.Invoke(item);
+        onItemAdded.Invoke(item);
 
         Debug.Log($"Added {item.ItemName} (ID: {item.ItemID}) to inventory");
         return true;

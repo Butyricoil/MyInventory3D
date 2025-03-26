@@ -5,14 +5,14 @@ using UnityEngine.Events; // Добавляем для работы с UnityEven
 [CreateAssetMenu(fileName = "InventoryData", menuName = "Inventory/InventoryData")]
 public class InventoryData : ScriptableObject
 {
-    [SerializeField] private List<ItemData> items = new List<ItemData>();
+    [SerializeField] private List<Item> items = new List<Item>();
 
     // События, которые вызываются при изменении инвентаря
-    public UnityEvent<ItemData> OnItemAdded;
-    public UnityEvent<ItemData> OnItemRemoved;
+    public UnityEvent<Item> OnItemAdded;
+    public UnityEvent<Item> OnItemRemoved;
     public UnityEvent OnInventoryChanged; // Общее событие, если не важно, какой именно предмет изменился
 
-    public void AddItem(ItemData item)
+    public void AddItem(Item item)
     {
         if (item == null)
         {
@@ -35,7 +35,7 @@ public class InventoryData : ScriptableObject
         }
     }
 
-    public void RemoveItem(ItemData item)
+    public void RemoveItem(Item item)
     {
         if (item == null)
         {
@@ -59,8 +59,8 @@ public class InventoryData : ScriptableObject
     }
 
     // Дополнительный метод для получения списка предметов (если нужен)
-    public List<ItemData> GetItems()
+    public List<Item> GetItems()
     {
-        return new List<ItemData>(items); // Возвращаем копию, чтобы оригинальный список нельзя было изменить извне
+        return new List<Item>(items); // Возвращаем копию, чтобы оригинальный список нельзя было изменить извне
     }
 }
