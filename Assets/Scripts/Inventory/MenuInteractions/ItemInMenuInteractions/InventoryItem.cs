@@ -6,17 +6,21 @@ using UnityEngine.PlayerLoop;
 
 public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
 
+    [Header("Ui")]
     [SerializeField] private Item item;
 
-    [Header("Ui")]
-    [SerializeField] private Image image;
-
+    [HideInInspector] public Image image;
     [HideInInspector] public Transform parentAfterDrag;
 
-    public void InitialliseItem(Item item)
+    // private void Start()
+    // {
+    //     InitialliseItem(item);
+    // }
+
+    public void InitialliseItem(Item newItem)
     {
-        InitialliseItem(item);
-        image.sprite = item.ItemSprite;
+        item = newItem;
+        image.sprite = newItem.ItemSprite;
     }
 
     public void OnBeginDrag(PointerEventData eventData) {

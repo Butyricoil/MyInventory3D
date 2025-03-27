@@ -15,9 +15,9 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private UnityEvent<Item> onItemAdded;
     [SerializeField] private UnityEvent<bool> onInventoryToggle;
 
-    private List<Item> _items = new List<Item>();
+    [SerializeField] private List<Item> items = new List<Item>();
 
-    public IReadOnlyList<Item> Items => _items.AsReadOnly();
+    public IReadOnlyList<Item> Items => items.AsReadOnly();
     public UnityEvent<Item> OnItemAdded => onItemAdded;
     public UnityEvent<bool> OnInventoryToggle => onInventoryToggle;
 
@@ -36,26 +36,21 @@ public class InventoryManager : MonoBehaviour
         onInventoryToggle.Invoke(newState);
     }
 
-    public void AddItem(Item item)
+    public bool AddItem(Item item)
     {
         // найти пустой слот
-        for (int i = 0; i < inventorySlot.Length; i++)
+        for (int i = 0; i < inventorySlot.Length - 1; i++)
         {
             InventorySlot slot = inventorySlot[i];
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
             if (itemInSlot == null)
             {
                 SpawnNewItem(item, slot);
-                return;
+                return true;
             }
         }
-
-        if (item == null) return;
-
-        _items.Add(item);
-        onItemAdded.Invoke(item);
-
         Debug.Log($"Added {item.ItemName} (ID: {item.ItemID}) to inventory");
+        return false;
     }
 
 
@@ -69,15 +64,15 @@ public class InventoryManager : MonoBehaviour
 
     public bool HasItem(int itemId)
     {
-        return _items.Exists(item => item.ItemID == itemId);
+        return items.Exists(item => item.ItemID == itemId);
     }
 
     public bool RemoveItem(int itemId)
     {
-        var item = _items.Find(i => i.ItemID == itemId);
+        var item = items.Find(i => i.ItemID == itemId);
         if (item != null)
         {
-            _items.Remove(item);
+            items.Remove(item);
             return true;
         }
         return false;
